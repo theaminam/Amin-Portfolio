@@ -1,5 +1,6 @@
 html {
-  font-size: 10px;
+  /* font-size: 10px; */
+  font-size: 75%;
 }
 
 p {
@@ -301,7 +302,7 @@ body:has(.Email:hover) .Email-L {
   display: block;
   transition: all 0.5s ease-in-out;
   padding-left: 0.7rem;
-  animation: show-Social-Label 1.2s ease-in;
+  animation: show-Social-Label 1s ease-in;
 }
 
 body:has(.Email:hover) .Email {
@@ -320,7 +321,8 @@ body:has(.Email:hover) .Email img {
 body:has(.Github:hover) .Github-L {
   display: block;
   transition: all 0.5s ease-in-out;
-  animation: show-Social-Label 1.2s ease-in;
+  padding-left: 0.2rem;
+  animation: show-Social-Label 1s ease-in;
 }
 
 body:has(.Github:hover) .Github {
@@ -339,7 +341,8 @@ body:has(.Github:hover) .Github img {
 body:has(.Telegram:hover) .Tel-L {
   display: block;
   transition: all 0.5s ease-in-out;
-  animation: show-Social-Label 1.2s ease-in;
+  padding-left: 0.2rem;
+  animation: show-Social-Label 1s ease-in;
 }
 
 body:has(.Telegram:hover) .Telegram {
