@@ -3,130 +3,177 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Amin dev</title>
+
     <link rel="stylesheet" href="CSS/style.css" />
-    <link rel="shortcut icon" href="icon-svg/Favicon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="CSS/Queries.css" />
+
+    <link rel="shortcut icon" href="icon-svg/Favicon.svg" type="image/x-icon" />
   </head>
+
   <body>
-    <!-- main-header -->
+    <!-- Header -->
     <header>
       <h1 class="typing-h1">&lt;Amin/&gt;</h1>
-      <nav class="header-nav">
-        <a href="#Home" class="menu-link">Home</a>
+
+      <nav class="header-nav" aria-label="Main navigation">
+        <a href="#About-Me" class="menu-link">Home</a>
         <a href="#About-Me" class="menu-link">About Me</a>
         <a href="#Skills" class="menu-link">Skills</a>
         <a href="#Projects" class="menu-link">Projects</a>
         <a href="#Contact-Me" class="menu-link">Contact Me</a>
       </nav>
     </header>
-    <!-- main -->
+
+    <!-- Main -->
     <main>
-      <!-- This section for About me -->
+      <!-- About Me -->
       <section id="About-Me">
         <div class="h2-About-Me">
           <h2 class="Main-h2">Some Information About Me</h2>
         </div>
+
         <div class="About-Me-pre">
-          <pre class="About-Me">
-            
-  I'm <span>Amin Abbasi</span>,I'm 17 years old.
-  I like Programming and computers.
-  I try to be a full stack developer in future.
-          </pre>
+          <pre class="About-Me">I'm <span>Amin Abbasi</span>, I'm 17 years old.
+I like programming and computers.
+I try to be a full stack developer in future.</pre>
         </div>
       </section>
-      <!-- This section for Skills -->
+
+      <!-- Skills -->
       <section id="Skills">
         <div class="h2-About-Me">
           <h2 class="Main-h2">My Skills</h2>
         </div>
+
         <div class="Skills-p">
-          <p class="Sk-p">Technologies i know and work with</p>
+          <p class="Sk-p">Technologies I know and work with</p>
         </div>
+
         <div class="About-Me-pre">
           <article class="Sk-article">
             <div class="HTML5">
-              <p class="HTML-p"><strong>HTML5</strong></p>
+              <p class="HTML-p">
+                <strong>HTML5</strong>
+              </p>
+
               <div class="HTML-Skill">
                 <p class="HTML-L">Advanced</p>
+
                 <img src="icon-svg/html5-brands-solid-full.svg" alt="HTML5" />
               </div>
             </div>
+
             <div class="CSS3">
-              <p class="CSS-p"><strong>CSS3</strong></p>
+              <p class="CSS-p">
+                <strong>CSS3</strong>
+              </p>
+
               <div class="CSS-Skill">
                 <p class="CSS-L">Learning</p>
+
                 <img src="icon-svg/css3-alt-brands-solid-full.svg" alt="CSS3" />
               </div>
             </div>
           </article>
         </div>
       </section>
-      <!-- This section for Projects -->
+
+      <!-- Projects -->
       <section id="Projects">
         <div class="h2-About-Me">
           <h2 class="Main-h2">My Projects</h2>
         </div>
+
         <div>
-          <p class="My-p">Projects i create or working on it</p>
+          <p class="My-p">Projects I create or work on</p>
         </div>
+
         <div class="About-Me-pre">
-          <div class="Portfolio-Projects">
-            <p class="P-Portfolio"><strong>Portfolio</strong></p>
-            <p class="S-Portfolio">A modern and dynamic Portfolio website</p>
+          <article class="Portfolio-Projects">
+            <p class="P-Portfolio">
+              <strong>Portfolio</strong>
+            </p>
+
+            <p class="S-Portfolio">A modern and dynamic portfolio website</p>
+
             <div class="Tech">HTML</div>
             <div class="Tech">CSS</div>
-            <a href="index.html" class="Portfolio-link">View Project</a>
-          </div>
+
+            <a href="index.html" class="Portfolio-link"> View Project </a>
+          </article>
         </div>
       </section>
-      <!-- This section for Contact -->
+
+      <!-- Contact -->
       <section class="Contact-Me" id="Contact-Me">
         <div class="h2-About-Me">
           <h2 class="Main-h2">Contact Me</h2>
         </div>
+
         <div>
-          <p class="C-Me">Ways to Contact to me</p>
+          <p class="C-Me">Ways to contact me</p>
         </div>
+
         <div class="Contact-m">
-          <section class="Contact">
-            <div>
-              <div class="Github">
-                <a href="https://Github.com/theaminam" target="_blank">
-                  <img
-                    src="icon-svg/github-brands-solid-full.svg"
-                    alt="Github"
-                  />
-                </a>
-                <label class="Github-L" for="Github"
-                  ><strong>Github</strong></label
-                >
-              </div>
+          <div class="Contact">
+            <!-- GitHub -->
+            <div class="Github">
+              <a
+                href="https://github.com/theaminam"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub"
+              >
+                <img src="icon-svg/github-brands-solid-full.svg" alt="GitHub" />
+              </a>
+
+              <span class="Github-L">
+                <strong>Github</strong>
+              </span>
             </div>
+
+            <!-- Telegram -->
             <div class="Telegram">
-              <a href="https://t.me/theaminam" target="_blank">
+              <a
+                href="https://t.me/theaminam"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Telegram"
+              >
                 <img
                   src="icon-svg/telegram-brands-solid-full.svg"
                   alt="Telegram"
                 />
               </a>
-              <label class="Tel-L" for="Telegram"
-                ><strong>Telegram</strong></label
-              >
+
+              <span class="Tel-L">
+                <strong>Telegram</strong>
+              </span>
             </div>
+
+            <!-- Email -->
             <div class="Email">
-              <a href="mailto:theaminak@gmail.com" target="_blank">
+              <a href="mailto:theaminak@gmail.com" aria-label="Email">
                 <img src="icon-svg/envelope-regular-full.svg" alt="Email" />
               </a>
-              <label for="E-mail" class="Email-L"><strong>Email</strong></label>
+
+              <span class="Email-L">
+                <strong>Email</strong>
+              </span>
             </div>
-          </section>
+          </div>
         </div>
       </section>
     </main>
-    <!-- main-footer -->
+
+    <!-- Footer -->
     <footer>
-      <p>&copy;2026 Written By <strong>Amin Abbasi</strong></p>
+      <p>
+        &copy;2026 Written By
+        <strong>Amin Abbasi</strong>
+      </p>
     </footer>
   </body>
 </html>

@@ -1,11 +1,5 @@
 html {
-  /* font-size: 10px; */
-  font-size: 75%;
-}
-
-p {
-  font-size: 1.5rem;
-  color: #393e46;
+  font-size: 10px;
 }
 
 * {
@@ -15,31 +9,45 @@ p {
   box-sizing: border-box;
 }
 
-span {
-  color: #00979f;
+html,
+body {
+  width: 100%;
+  max-width: 100%;
 }
 
 body {
   background-color: #eeeeee;
   display: flex;
-  width: 100%;
   align-items: center;
   flex-direction: column;
 }
+
+p {
+  font-size: 1.5rem;
+  color: #393e46;
+}
+
+span {
+  color: #00979f;
+}
+
+/* =========================
+   HEADER
+========================= */
 
 header {
   background-color: #393e46;
   padding: 1rem;
   position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   width: 100%;
   z-index: 9999;
+
   display: flex;
   justify-content: space-between;
-}
-
-main {
-  padding: 10rem 0;
+  align-items: center;
 }
 
 header h1 {
@@ -48,20 +56,14 @@ header h1 {
   justify-content: left;
 }
 
-footer p {
-  color: #eeeeee;
-  padding-left: 1rem;
-}
-
-footer {
-  background-color: #393e46;
-  width: 100%;
-}
-
 h1 {
   font-size: 3rem;
   padding-left: 1rem;
 }
+
+/* =========================
+   HEADER NAV
+========================= */
 
 .header-nav {
   display: flex;
@@ -74,10 +76,13 @@ h1 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
   height: 3.5rem;
+
   text-decoration: none;
   color: #00adb5;
   font-size: 1.8rem;
+
   padding-left: 1rem;
   gap: 0.2rem;
 }
@@ -90,6 +95,7 @@ h1 {
   content: "";
   height: 3px;
   background-color: #eeeeee;
+
   animation: underline-link 0.7s linear forwards;
 }
 
@@ -105,30 +111,146 @@ h1 {
   }
 }
 
+/* =========================
+   MAIN
+========================= */
+
+main {
+  width: 100%;
+  max-width: 100%;
+  padding: 10rem 0;
+}
+
+main > section {
+  width: calc(100% - 3rem);
+  max-width: 50rem;
+
+  margin: 4rem auto 0;
+
+  scroll-margin-top: 8rem;
+}
+
+/* =========================
+   COMMON CONTAINERS
+========================= */
+
+.About-Me-pre,
+.Contact-m,
+.h2-About-Me,
+.Skills-p {
+  width: 100%;
+  max-width: 50rem;
+}
+
+/* =========================
+   ABOUT ME
+========================= */
+
 .About-Me {
   font-size: 1.8rem;
 }
 
+.About-Me-pre {
+  background-color: #222831;
+  height: auto;
+
+  border-radius: 0 0 1rem 1rem;
+
+  padding-bottom: 1rem;
+}
+
+pre {
+  padding: 1rem;
+  color: #eeeeee;
+  line-height: 1.5;
+
+  width: 100%;
+  max-width: 100%;
+
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+}
+
+/* =========================
+   SECTION TITLE
+========================= */
+
+.h2-About-Me {
+  background-color: #00adb5;
+
+  margin-bottom: 0;
+
+  height: auto;
+
+  border-radius: 1rem 1rem 0 0;
+
+  text-align: center;
+}
+
+.Main-h2 {
+  padding: 1rem 0 1rem 0.5rem;
+
+  font-size: 2.5rem;
+  color: #eeeeee;
+}
+
+/* =========================
+   CONTACT / TEXT BOXES
+========================= */
+
 .C-Me {
   font-size: 1.8rem;
   color: #eeeeee;
+
   background-color: #222831;
-  width: 50rem;
+
+  width: 100%;
+  max-width: 50rem;
+
   height: auto;
+
   border-radius: 0;
+
   text-align: center;
+
   padding: 1rem 0;
+
   line-height: 1.4;
 }
 
+.Contact-Me p {
+  font-size: 2rem;
+}
+
+.Contact-m {
+  display: flex;
+  justify-content: center;
+
+  background-color: #222831;
+
+  height: auto;
+
+  border-radius: 0 0 1rem 1rem;
+
+  padding-bottom: 1rem;
+}
+
+/* =========================
+   TYPING H1
+========================= */
+
 .typing-h1 {
   display: inline-block;
+
   overflow: hidden;
+
   border-right: 2px solid white;
+
   white-space: nowrap;
+
   animation:
-    typing-h1 1s steps(10),
-    blink-caret 1s step-end infinite;
+    typing-h1 1s steps(7),
+    blink-caret 0.8s step-end infinite;
 }
 
 @keyframes typing-h1 {
@@ -152,95 +274,86 @@ h1 {
   }
 }
 
+/* =========================
+   SKILLS
+========================= */
+
 .Sk-p {
   font-size: 1.8rem;
   color: #eeeeee;
+
   padding-top: 1rem;
+
   line-height: 2;
 }
 
-.My-p {
-  font-size: 1.8rem;
-  color: #eeeeee;
-  text-align: center;
+.Skills-p {
   background-color: #222831;
-  width: 50rem;
+
   height: auto;
+
   border-radius: 0;
-  padding-bottom: 1rem;
-  padding-top: 1rem;
-  line-height: 2;
+
+  text-align: center;
 }
 
-.devicon-html5-plain {
-  font-size: 7rem;
-}
+.Sk-article {
+  display: flex;
+  flex-wrap: wrap;
 
-.devicon-css3-plain {
-  font-size: 7rem;
-}
+  justify-content: left;
 
-.social-Media {
-  text-decoration: none;
-  color: #00adb5;
-}
+  gap: 1.5rem;
 
-.social-Media:hover {
-  color: #222831;
-  cursor: pointer;
-}
-
-.Main-h2 {
-  padding: 1rem 0;
-  font-size: 2.5rem;
-  padding-left: 0.5rem;
-  color: #eeeeee;
-}
-
-pre {
   padding: 1rem;
-  color: #eeeeee;
-  line-height: 1.5;
-}
-
-i {
-  display: block;
-  margin-top: 1rem;
 }
 
 .HTML-p,
 .CSS-p {
   margin: auto;
+
   color: #eeeeee;
+
   padding-top: 0.5rem;
 }
 
 .HTML5,
 .CSS3 {
   margin-top: 1rem;
+  margin-left: 0;
+
   padding-bottom: 1.3rem;
+
   text-align: center;
+
   width: 15rem;
   height: 19.5rem;
+
   background-color: #00adb5;
+
   border-radius: 1rem;
-  margin-left: 1.5rem;
+
+  flex: 0 1 15rem;
 }
 
 .HTML5:hover,
 .CSS3:hover {
   transition: all 0.5s ease-in-out;
+
   box-shadow: 0 0 1.5rem #00979f;
+
   border: 2px solid #3bc9db;
 }
 
 body:has(.HTML5:hover) .HTML5 img {
   transform: scale(1.1);
+
   transition: all 0.5s ease-in-out;
 }
 
 body:has(.CSS3:hover) .CSS3 img {
   transform: scale(1.1);
+
   transition: all 0.5s ease-in-out;
 }
 
@@ -252,35 +365,82 @@ body:has(.CSS3:hover) .CSS3 img {
 .HTML-L,
 .CSS-L {
   padding: 0.3rem;
+
   width: 85%;
+
   margin: 0.3rem auto;
+
   background-color: #393e46;
+
   color: #eeeeee;
+
   border-radius: 1rem;
 }
 
-.Sk-article {
-  display: flex;
-  padding-bottom: 1rem;
-  overflow: hidden;
+/* =========================
+   ICONS
+========================= */
+
+.devicon-html5-plain {
+  font-size: 7rem;
+}
+
+.devicon-css3-plain {
+  font-size: 7rem;
 }
 
 svg {
   color: #eeeeee;
 }
 
+/* =========================
+   SOCIAL MEDIA
+========================= */
+
+.social-Media {
+  text-decoration: none;
+  color: #00adb5;
+}
+
+.social-Media:hover {
+  color: #222831;
+  cursor: pointer;
+}
+
+.Contact {
+  display: flex;
+  flex-wrap: wrap;
+
+  justify-content: center;
+
+  margin-top: 0;
+}
+
 .Github,
 .Telegram,
 .Email {
   margin-top: 1rem;
+
   text-align: center;
+
   width: 6rem;
   height: 6rem;
+
   background-color: #00adb5;
+
   border-radius: 1rem;
-  margin-left: 1.5rem;
+
+  margin-left: 0;
   margin-bottom: 1.5rem;
+
   padding: 0.5rem;
+
+  flex: 0 0 auto;
+}
+
+.Github + .Telegram,
+.Telegram + .Email {
+  margin-left: 1.5rem;
 }
 
 .Github:hover,
@@ -294,87 +454,96 @@ svg {
 .Tel-L,
 .Email-L {
   color: #eeeeee;
+
   display: none;
+
   font-size: 1.5rem;
 }
 
 body:has(.Email:hover) .Email-L {
   display: block;
+
   transition: all 0.5s ease-in-out;
+
   padding-left: 0.7rem;
+
   animation: show-Social-Label 1s ease-in;
 }
 
 body:has(.Email:hover) .Email {
   width: 12rem;
+
   transition: all 0.5s ease-in-out;
+
   box-shadow: 0 0 1.5rem #00979f;
+
   border: 2px solid #3bc9db;
 }
 
 body:has(.Email:hover) .Email img {
   transform: scale(1.08);
+
   transition: all 0.5s ease-in-out;
+
   width: 5.5rem;
 }
 
 body:has(.Github:hover) .Github-L {
   display: block;
+
   transition: all 0.5s ease-in-out;
+
   padding-left: 0.2rem;
+
   animation: show-Social-Label 1s ease-in;
 }
 
 body:has(.Github:hover) .Github {
   width: 12rem;
+
   transition: all 0.5s ease-in-out;
+
   box-shadow: 0 0 1.5rem #00979f;
+
   border: 2px solid #3bc9db;
 }
 
 body:has(.Github:hover) .Github img {
   transform: scale(1.08);
+
   transition: all 0.5s ease-in-out;
+
   width: 5.5rem;
 }
 
 body:has(.Telegram:hover) .Tel-L {
   display: block;
+
   transition: all 0.5s ease-in-out;
+
   padding-left: 0.2rem;
+
   animation: show-Social-Label 1s ease-in;
 }
 
 body:has(.Telegram:hover) .Telegram {
   width: 14rem;
+
   transition: all 0.5s ease-in-out;
+
   box-shadow: 0 0 1.5rem #00979f;
+
   border: 2px solid #3bc9db;
+
   padding-right: 2rem;
 }
 
 body:has(.Telegram:hover) .Telegram img {
   transform: scale(1.08);
+
   transition: all 0.5s ease-in-out;
+
   width: 5.5rem;
-}
-
-.Contact {
-  display: flex;
-}
-
-.Contact-Me p {
-  font-size: 2rem;
-}
-
-section {
-  margin-top: 4rem;
-  margin-left: 1.5rem;
-  scroll-margin-top: 8rem;
-}
-
-.Contact {
-  margin-top: 0;
 }
 
 @keyframes show-Social-Label {
@@ -387,43 +556,86 @@ section {
   }
 }
 
+/* =========================
+   PROJECTS
+========================= */
+
+.My-p {
+  font-size: 1.8rem;
+  color: #eeeeee;
+
+  text-align: center;
+
+  background-color: #222831;
+
+  width: 100%;
+  max-width: 50rem;
+
+  height: auto;
+
+  border-radius: 0;
+
+  padding: 1rem 0;
+
+  line-height: 2;
+}
+
 .Portfolio-Projects {
   background-color: #00adb5;
+
   width: 20rem;
+  max-width: 100%;
+
   height: 15rem;
+
   padding-left: 1rem;
+
   margin-left: 1.5rem;
+
   border-radius: 1rem;
 }
 
 .Tech {
   width: 4rem;
   height: 2.5rem;
+
   display: inline-flex;
+
   color: #222831;
+
   background-color: #eeeeee66;
+
   border-radius: 1.5rem;
+
   text-align: center;
+
   justify-content: center;
   align-items: center;
+
   margin-top: 1rem;
 }
 
 .Tech:hover {
   background-color: #eeeeee;
+
   transition: all 0.5s ease-in-out;
 }
 
 .P-Portfolio {
   padding-top: 1rem;
+
   font-weight: bold;
+
   color: #000;
 }
 
 .Portfolio-link {
   text-decoration: none;
+
   display: block;
+
   margin-top: 2.2rem;
+
   color: black;
 }
 
@@ -434,46 +646,23 @@ section {
 
 .Portfolio-link:hover {
   color: #eeeeee;
+
   transition: all 0.2s ease-in-out;
 }
 
 .Portfolio-Projects:hover {
   transition: all 0.5s ease-in-out;
+
   box-shadow: 0 0 1.5rem #00979f;
+
   border: 2px solid #3bc9db;
 }
-
-.About-Me-pre {
-  background-color: #222831;
-  width: 50rem;
-  height: auto;
-  border-radius: 0 0 1rem 1rem;
-  padding-bottom: 1rem;
+footer {
+  background-color: #393e46;
+  width: 100%;
 }
-
-.Contact-m {
-  display: flex;
-  justify-content: center;
-  background-color: #222831;
-  width: 50rem;
-  height: auto;
-  border-radius: 0 0 1rem 1rem;
-  padding-bottom: 1rem;
-}
-
-.h2-About-Me {
-  background-color: #00adb5;
-  margin-bottom: 0;
-  width: 50rem;
-  height: auto;
-  border-radius: 1rem 1rem 0 0;
-  text-align: center;
-}
-
-.Skills-p {
-  background-color: #222831;
-  width: 50rem;
-  height: auto;
-  border-radius: 0;
-  text-align: center;
+footer p {
+  color: #eeeeee;
+  padding: 1rem;
+  text-align: left;
 }

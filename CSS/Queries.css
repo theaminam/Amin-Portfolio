@@ -1,0 +1,82 @@
+@media (max-width: 600px) {
+  html,
+  body {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  footer {
+    background-color: #393e46;
+    width: 100%;
+  }
+  footer p {
+    color: #eeeeee;
+    padding: 1rem;
+    text-align: center;
+  }
+  main {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  main > section {
+    width: calc(100% - 2rem);
+    max-width: 50rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .About-Me-pre,
+  .Contact-m,
+  .h2-About-Me,
+  .Skills-p,
+  .C-Me,
+  .My-p {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .Sk-article {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    gap: 1rem;
+  }
+
+  .Contact {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .Github + .Telegram,
+  .Telegram + .Email {
+    margin-left: 0;
+  }
+
+  pre {
+    width: 100%;
+    max-width: 100%;
+
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+  }
+
+  .Portfolio-Projects {
+    width: 20rem;
+    max-width: 100%;
+    margin-left: 1.5rem;
+  }
+
+  .typing-h1 {
+    height: 1.2em;
+    line-height: 1.2;
+  }
+}
