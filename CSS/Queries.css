@@ -9,6 +9,31 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 1rem;
+  }
+
+  .header-nav {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 0;
+  }
+  .menu-link {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    height: auto;
+
+    font-size: 1.5rem;
+
+    padding: 0.4rem 0.6rem;
+
+    white-space: nowrap;
   }
 
   footer {
@@ -44,11 +69,16 @@
 
   .Sk-article {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: left;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
     gap: 1rem;
+    overflow-x: auto;
+    overflow-y: hidden;
   }
 
+  .Sk-article > div {
+    flex: 0 0 15rem;
+  }
   .Contact {
     display: flex;
     flex-wrap: wrap;
@@ -78,5 +108,29 @@
   .typing-h1 {
     height: 1.2em;
     line-height: 1.2;
+  }
+
+  .About-Me-pre:has(.Portfolio-Projects) {
+    width: 100%;
+    max-width: 100%;
+
+    display: flex;
+    flex-wrap: nowrap;
+
+    gap: 1rem;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    justify-content: flex-start;
+  }
+
+  .About-Me-pre:has(.Portfolio-Projects) .Portfolio-Projects {
+    flex: 0 0 20rem;
+
+    width: 20rem;
+    min-width: 20rem;
+
+    margin-left: 0;
   }
 }

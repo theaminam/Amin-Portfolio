@@ -153,10 +153,15 @@ main > section {
 .About-Me-pre {
   background-color: #222831;
   height: auto;
-
+  width: 100%;
+  max-width: 50rem;
   border-radius: 0 0 1rem 1rem;
-
   padding-bottom: 1rem;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 1.5rem;
+  overflow-x: auto;
+  overflow-y: hidden;
 }
 
 pre {
@@ -299,17 +304,22 @@ pre {
 
 .Sk-article {
   display: flex;
-  flex-wrap: wrap;
-
-  justify-content: left;
-
+  flex-wrap: nowrap;
+  justify-content: flex-start;
   gap: 1.5rem;
-
   padding: 1rem;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+}
+
+.Sk-article > div {
+  flex: 0 0 15rem;
 }
 
 .HTML-p,
-.CSS-p {
+.CSS-p,
+.Git-p {
   margin: auto;
 
   color: #eeeeee;
@@ -318,7 +328,8 @@ pre {
 }
 
 .HTML5,
-.CSS3 {
+.CSS3,
+.Git {
   margin-top: 1rem;
   margin-left: 0;
 
@@ -333,11 +344,12 @@ pre {
 
   border-radius: 1rem;
 
-  flex: 0 1 15rem;
+  flex: 0 0 15rem;
 }
 
 .HTML5:hover,
-.CSS3:hover {
+.CSS3:hover,
+.Git:hover {
   transition: all 0.5s ease-in-out;
 
   box-shadow: 0 0 1.5rem #00979f;
@@ -357,13 +369,21 @@ body:has(.CSS3:hover) .CSS3 img {
   transition: all 0.5s ease-in-out;
 }
 
+body:has(.Git:hover) .Git img {
+  transform: scale(1.1);
+
+  transition: all 0.5s ease-in-out;
+}
+
 .Sk-article .HTML-L,
-.Sk-article .CSS-L {
+.Sk-article .CSS-L,
+.Sk-article .Git-L {
   margin-top: 0.5rem;
 }
 
 .HTML-L,
-.CSS-L {
+.CSS-L,
+.Git-L {
   padding: 0.3rem;
 
   width: 85%;
@@ -580,18 +600,37 @@ body:has(.Telegram:hover) .Telegram img {
   line-height: 2;
 }
 
-.Portfolio-Projects {
-  background-color: #00adb5;
+.About-Me-pre:has(.Portfolio-Projects) {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 1.5rem;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  justify-content: flex-start;
+
+  width: 50rem;
+  max-width: 100%;
+
+  padding: 1rem;
+
+  scroll-behavior: smooth;
+}
+
+.About-Me-pre:has(.Portfolio-Projects) .Portfolio-Projects {
+  flex: 0 0 20rem;
 
   width: 20rem;
-  max-width: 100%;
+  min-width: 20rem;
 
   height: 15rem;
 
+  margin-left: 0;
+
   padding-left: 1rem;
 
-  margin-left: 1.5rem;
-
+  background-color: #00adb5;
   border-radius: 1rem;
 }
 
