@@ -160,7 +160,7 @@ main > section {
   display: flex;
   flex-wrap: nowrap;
   gap: 1.5rem;
-  overflow-x: auto;
+  overflow-x: hidden;
   overflow-y: hidden;
 }
 
@@ -308,7 +308,7 @@ pre {
   justify-content: flex-start;
   gap: 1.5rem;
   padding: 1rem;
-  overflow-x: auto;
+  overflow-x: hidden;
   overflow-y: hidden;
   scroll-behavior: smooth;
 }
@@ -319,7 +319,8 @@ pre {
 
 .HTML-p,
 .CSS-p,
-.Git-p {
+.Git-p,
+.Gith-p {
   margin: auto;
 
   color: #eeeeee;
@@ -329,7 +330,8 @@ pre {
 
 .HTML5,
 .CSS3,
-.Git {
+.Git,
+.Gith {
   margin-top: 1rem;
   margin-left: 0;
 
@@ -349,7 +351,8 @@ pre {
 
 .HTML5:hover,
 .CSS3:hover,
-.Git:hover {
+.Git:hover,
+.Gith:hover {
   transition: all 0.5s ease-in-out;
 
   box-shadow: 0 0 1.5rem #00979f;
@@ -375,15 +378,23 @@ body:has(.Git:hover) .Git img {
   transition: all 0.5s ease-in-out;
 }
 
+body:has(.Gith:hover) .Gith img {
+  transform: scale(1.1);
+
+  transition: all 0.5s ease-in-out;
+}
+
 .Sk-article .HTML-L,
 .Sk-article .CSS-L,
-.Sk-article .Git-L {
+.Sk-article .Git-L,
+.Sk-article .Gith-L {
   margin-top: 0.5rem;
 }
 
 .HTML-L,
 .CSS-L,
-.Git-L {
+.Git-L,
+.Gith-L {
   padding: 0.3rem;
 
   width: 85%;
@@ -605,7 +616,7 @@ body:has(.Telegram:hover) .Telegram img {
   flex-wrap: nowrap;
   gap: 1.5rem;
 
-  overflow-x: auto;
+  overflow-x: hidden;
   overflow-y: hidden;
 
   justify-content: flex-start;
@@ -704,4 +715,54 @@ footer p {
   color: #eeeeee;
   padding: 1rem;
   text-align: left;
+}
+.animate{
+  animation-name: go;
+  animation-duration: 4s;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+  animation-play-state: running;
+  animation-fill-mode: backwards;
+  animation-iteration-count: infinite;
+}
+.animate:hover{
+  animation-play-state: paused;
+}
+@keyframes go{
+ to{
+  transform: translateX(-17rem);
+ }
+}
+.skill {
+  position: relative;
+  overflow-x: hidden;
+}
+
+.skill::before,
+.skill::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 60px;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.skill::before {
+  left: 0;
+  background: linear-gradient(
+    to right,
+    rgba(30, 30, 30, 0.6),
+    transparent
+  );
+}
+
+.skill::after {
+  right: 0;
+  background: linear-gradient(
+    to left,
+    rgba(30, 30, 30, 0.6),
+    transparent
+  );
 }
