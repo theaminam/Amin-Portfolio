@@ -358,6 +358,8 @@ pre {
   box-shadow: 0 0 1.5rem #00979f;
 
   border: 2px solid #3bc9db;
+
+  transform: translateY(-0.8rem);
 }
 
 body:has(.HTML5:hover) .HTML5 img {
@@ -706,6 +708,8 @@ body:has(.Telegram:hover) .Telegram img {
   box-shadow: 0 0 1.5rem #00979f;
 
   border: 2px solid #3bc9db;
+
+  transform: translateY(-0.8rem);
 }
 footer {
   background-color: #393e46;
@@ -716,7 +720,7 @@ footer p {
   padding: 1rem;
   text-align: left;
 }
-.animate{
+.animate {
   animation-name: go;
   animation-duration: 4s;
   animation-timing-function: linear;
@@ -725,13 +729,13 @@ footer p {
   animation-fill-mode: backwards;
   animation-iteration-count: infinite;
 }
-.animate:hover{
+.animate:hover {
   animation-play-state: paused;
 }
-@keyframes go{
- to{
-  transform: translateX(-17rem);
- }
+@keyframes go {
+  to {
+    transform: translateX(-17rem);
+  }
 }
 .skill {
   position: relative;
@@ -751,18 +755,10 @@ footer p {
 
 .skill::before {
   left: 0;
-  background: linear-gradient(
-    to right,
-    rgba(30, 30, 30, 0.6),
-    transparent
-  );
+  background: linear-gradient(to right, rgba(30, 30, 30, 0.4), transparent);
 }
 
 .skill::after {
   right: 0;
-  background: linear-gradient(
-    to left,
-    rgba(30, 30, 30, 0.6),
-    transparent
-  );
+  background: linear-gradient(to left, rgba(30, 30, 30, 0.4), transparent);
 }
