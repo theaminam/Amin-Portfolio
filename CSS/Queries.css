@@ -152,7 +152,7 @@
     transform: translateX(0);
   }
   to {
-    transform: translateX(-23rem);
+    transform: translateX(-28rem);
   }
 }
 .skill {
