@@ -135,4 +135,50 @@
     margin-left: 0;
   }
   
+  .animate {
+  animation-name: go;
+  animation-duration: 4s;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+  animation-play-state: running;
+  animation-fill-mode: backwards;
+  animation-iteration-count: infinite;
+}
+.animate:hover {
+  animation-play-state: paused;
+}
+@keyframes go {
+  from{
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-23rem);
+  }
+}
+.skill {
+  position: relative;
+  overflow-x: hidden;
+}
+
+.skill::before,
+.skill::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 60px;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.skill::before {
+  left: 0;
+  background: linear-gradient(to right, rgba(30, 30, 30, 0.4), transparent);
+}
+
+.skill::after {
+  right: 0;
+  background: linear-gradient(to left, rgba(30, 30, 30, 0.4), transparent);
+}
+
 }
